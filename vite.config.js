@@ -1,14 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
     allowedHosts: [
-      "439d0371-c3e1-46f2-ae6d-95e30073f73c-00-1xe06z6n6gp8n.riker.replit.dev", // your host
-      "localhost", // keep localhost for local dev
+      "d6c5e36c-24c6-47a7-b05f-451a4dd69911-00-c7lttubx7vnn.picard.replit.dev"
     ],
-    host: true, // listen on all addresses
-    port: 5173, // you can change if needed
+    host: true,
+    port: 5000, // 👈 run dev server on port 5000
   },
 });
