@@ -5,23 +5,7 @@ import {
   Routes,
   Route,
   Link,
-  useNavigate,
 } from "react-router-dom";
-
-/*
-  Extremely long single-file App.jsx that follows the reference corrections:
-  - Navbar is dark/transparent (no white band above it)
-  - "A look at our partners paving the future!" is white text on a textured gradient background (no partner logos in that section)
-  - "We are a Technology Provider & Partner to Proprietary Partners LLP" section uses blue heading text on white background with the long legal/business write-up
-  - "From insights to impact!" is left-aligned; chain graphic sits behind content
-  - The section above "Plata × Vulue" is a blue background block with the long "We took their strategies..." copy
-  - "Plata × Vulue" has a large decorative gradient/glass text treatment (visual effect only)
-  - "Take Your Next Leap" uses the wave background and visible CTA
-  - "Our TrailX Suite" is a smaller square quadrant block (not huge) positioned left, with TrailX label/text beside it
-  - Footer contains X and LinkedIn links (embedded SVG)
-  - Login page matches the supplied login aesthetic, with diagonal lines and waitlist modal
-  - Required assets must exist in src/assets/: logo.png, hero-bg.png, icon-1..4, chain.png, gradient-1.png, wave-pattern.png, partner-1..4
-*/
 
 /* ----------------- ASSETS ----------------- */
 import Logo from "./assets/logo.png";
@@ -38,7 +22,7 @@ import Partner2 from "./assets/partner-2.png";
 import Partner3 from "./assets/partner-3.png";
 import Partner4 from "./assets/partner-4.png";
 
-/* ----------------- Helpers ----------------- */
+/* ----------------- Small layout helpers ----------------- */
 const Max = ({ children, className = "" }) => (
   <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
     {children}
@@ -57,21 +41,13 @@ const CTAButton = ({ to, children, variant = "primary", onClick }) => {
   const styles = {
     primary: "bg-white text-[#1511D1] hover:bg-slate-100",
     ghost: "bg-white/10 text-white hover:bg-white/20",
-    dark: "bg-neutral-900 text-white hover:bg-black/80",
   };
-  return to ? (
-    <Link to={to} className={`${base} ${styles[variant]}`}>
-      {children}
-    </Link>
-  ) : (
-    <button onClick={onClick} className={`${base} ${styles[variant]}`}>
-      {children}
-    </button>
-  );
+  const cls = `${base} ${styles[variant] || styles.primary}`;
+  if (to) return <Link to={to} className={cls}>{children}</Link>;
+  return <button onClick={onClick} className={cls}>{children}</button>;
 };
 
 /* ----------------- NAVBAR ----------------- */
-/* Transparent/dark navbar (no white gap). Fixed at top. */
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -142,7 +118,7 @@ function Hero() {
   );
 }
 
-/* ----------------- TOGETHER WE CREATE (icons + text) ----------------- */
+/* ----------------- TOGETHER WE CREATE ----------------- */
 function TogetherSection() {
   return (
     <Section className="bg-[#0A0B14] text-white py-24">
@@ -153,6 +129,12 @@ function TogetherSection() {
             <p className="mt-5 max-w-xl text-white/70">
               A collaborative analytics surface where strategists, operators and partners converge to build the future—faster, safer, and with better signal.
             </p>
+            <div className="mt-8 grid grid-cols-1 gap-3 text-white/80">
+              <p>We are a software and intelligence technology company focused on powering collaborative finance in West Africa and other frontier markets.</p>
+              <p>We aim to provide a platform-as-a-service infrastructure for friends, families, investment clubs, and strategy groups to explore, coordinate, and manage their investment interests — all through a secure, private environment backed by trusted capital market providers.</p>
+              <p>Our platform, powered by TrailX+ enables the formation of digital strategy baskets hosted by LLPs, LPs, and registered capital managers. Each group or firm maintains control over visibility, access, and allocation logic for their unique plans.</p>
+              <p>Vulue's mission is to streamline technology adoption across emerging capital ecosystems by building a regulated-aligned, modular platform where licensed entities and private groups can operate efficiently and transparently. We do not act as a broker-dealer, investment adviser, or asset manager, nor do we hold or move investor funds. All transactional access is provided via integration with duly licensed third-party API partners and intermediaries.</p>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -186,18 +168,15 @@ function TogetherSection() {
   );
 }
 
-/* ----------------- PARTNERS HERO (white text on gradient background — NO logos here) ----------------- */
+/* ----------------- PARTNERS HERO (wave background, white text, no logos) ----------------- */
 function PartnersHero() {
   return (
     <Section className="relative">
-      {/* full bleed gradient texture */}
       <div className="absolute inset-0 -z-10">
-        <img src={Gradient1} alt="gradient texture" className="w-full h-full object-cover" />
+        {/* wave-pattern is used here as requested */}
+        <img src={WavePattern} alt="wave texture" className="w-full h-full object-cover" />
       </div>
-
-      {/* overlay dark tint so white text is readable */}
-      <div className="absolute inset-0 bg-black/30 -z-5" />
-
+      <div className="absolute inset-0 bg-black/35 -z-5" />
       <Max className="py-20 text-white">
         <div className="max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">A look at our partners paving the future!</h2>
@@ -241,21 +220,21 @@ function TechnologyProvider() {
   );
 }
 
-/* ----------------- INSIGHTS (chain image behind; left-aligned text) ----------------- */
+/* ----------------- INSIGHTS (chain full background behind text, left aligned headline) ----------------- */
 function Insights() {
   return (
     <Section className="relative bg-[#0A0B14] text-white overflow-hidden py-20">
-      {/* Chain graphic sits behind content */}
       <div className="absolute inset-0 -z-10">
-        <img src={ChainImg} alt="chain" className="w-full h-full object-cover opacity-20" />
+        <img src={ChainImg} alt="chain" className="w-full h-full object-cover" />
       </div>
+
+      <div className="absolute inset-0 bg-black/45 -z-5" />
 
       <Max>
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          {/* Left-aligned headline + copy */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white">From <span className="text-white/60">insights</span> to impact!</h2>
-            <p className="mt-4 text-white/80 max-w-lg">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white text-left">From <span className="text-white/60">insights</span> to impact!</h2>
+            <p className="mt-4 text-white/80 max-w-lg text-left">
               We took a multi-stage approach and built a Quantamental Analytics Framework for improved decision-making across the organization. Results: faster execution cycles, clearer KPIs, and higher ROI.
             </p>
             <div className="mt-6">
@@ -265,26 +244,17 @@ function Insights() {
             </div>
           </div>
 
-          {/* Right visual placeholder — chain close-up */}
           <div className="relative flex items-center justify-end">
-            <div className="w-[60%] md:w-[80%] max-w-[520px]">
+            {/* chain graphic repeated or scaled to create layered effect (kept behind actual content) */}
+            <div className="w-[60%] md:w-[80%] max-w-[520px] opacity-0">
+              {/* visually hidden; chain is full-bg already */}
               <img src={ChainImg} alt="chain graphic" className="w-full object-contain" />
             </div>
           </div>
         </div>
       </Max>
 
-      {/* TrailX small label bottom-left with low opacity */}
       <div className="absolute left-6 bottom-6 text-white/10 text-sm font-extrabold">TrailX</div>
-
-      {/* Decorative Plata × Vulue faint typography behind (separate section visually but included here) */}
-      <div className="pointer-events-none select-none mt-8">
-        <Max>
-          <div className="text-[10vw] font-extrabold leading-none text-transparent" style={{ WebkitTextStroke: "2px rgba(255,255,255,0.03)", textStroke: "2px rgba(255,255,255,0.03)" }}>
-            Plata × Vulue
-          </div>
-        </Max>
-      </div>
     </Section>
   );
 }
@@ -313,25 +283,36 @@ function StrategiesBuilt() {
   );
 }
 
-/* ----------------- VULUE + PLATA DESCRIPTION (white background) ----------------- */
-function VuluePlata() {
+/* ----------------- PLATA × VULUE (COMBINED with Vulue partners with Plata copy; blue background + gradient text) ----------------- */
+function PlataAndVulueCombined() {
   return (
-    <Section className="bg-white text-[#0A0B14] py-20">
+    <Section className="relative bg-gradient-to-b from-[#08103a] to-[#0b2b6b] text-white overflow-hidden py-20">
       <Max>
-        <div className="max-w-4xl">
-          <h4 className="text-xl font-semibold mb-3">Vulue partners with Plata</h4>
-          <div className="prose prose-neutral">
-            <p>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-extrabold">Plata × Vulue</h2>
+            <p className="mt-4 text-white/90">
               Vulue partners with Plata to unlock the full potential of Real-World Assets and Strategies. Our purpose is to democratize access to high-value assets by providing a streamlined, end-to-end solution for tokenization. Functionally, we offer some of the tools for Plata to carry out asset wrapping, and the minting of Strategy Vaults as a class of our broader Real World Asset-Linked Vault Tokens. The project's core utility is twofold: for asset owners, it unlocks immediate liquidity and access to global capital markets; for investors, it offers fractional, transparent, and liquid access to investment classes like private credit notes and infrastructure bonds, with the value of the tokens engineered to mirror the underlying RWASs performances.
             </p>
-
-            <p>
+            <p className="mt-3 text-white/85">
               Vulue acts as the technology provider. It builds the rails (TrailX+ quant tools, order, reconciliation & settlement system, monitoring, token infrastructure). Vulue issues the Asset-Linked Vault Tokens as digital wrappers but doesn’t “own” the strategies themselves. While Plata acts as the service provider & structuring arm (like a global holding wrapper). It sets up the subsidiaries/LLCs/LLPs in each market and holds/executes the real-world assets or strategies that the tokens mirror.
             </p>
+          </div>
 
-            <p>
-              The vault strategies sit inside Plata (jurisdictional entities). The tokens sit inside Vulue (as wrappers/tracking instruments). The two are linked 1:1 as Vulue can transparently monitor what Plata is doing and reflect that in token performance. Vulue makes it portable, visible, tokenized. Plata makes it legally holdable, bankable, compliant.
-            </p>
+          {/* Decorative gradient/glass large text placed visually in same section (positioned right) */}
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
+              <div style={{ background: "linear-gradient(90deg,#6dd3ff,#7b61ff)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }} className="text-[12vw] font-extrabold leading-none opacity-20">
+                Plata × Vulue
+              </div>
+            </div>
+
+            <div className="relative p-6 bg-white/5 rounded-2xl border border-white/6">
+              <h4 className="font-semibold text-white">How it works</h4>
+              <p className="mt-2 text-white/80">
+                The vault strategies sit inside Plata (jurisdictional entities). The tokens sit inside Vulue (as wrappers/tracking instruments). The two are linked 1:1 as Vulue can transparently monitor what Plata is doing and reflect that in token performance.
+              </p>
+            </div>
           </div>
         </div>
       </Max>
@@ -339,32 +320,7 @@ function VuluePlata() {
   );
 }
 
-/* ----------------- PLATA × VULUE VISUAL (gradient/glass text, separate visual block) ----------------- */
-function PlataVulueVisual() {
-  return (
-    <Section className="relative py-20 overflow-hidden">
-      <div className="bg-gradient-to-r from-[#0b2370] via-[#1511D1] to-[#2aa6f6] py-16">
-        <Max>
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Plata × Vulue</h2>
-            <p className="text-white/90">A collaborative partnership to deliver tokenized real-world asset strategies and regulated structuring across global markets.</p>
-          </div>
-        </Max>
-      </div>
-
-      {/* big decorative gradient text behind (glass-like) */}
-      <div className="pointer-events-none select-none mt-6">
-        <Max>
-          <div style={{ background: "linear-gradient(90deg,#6dd3ff,#7b61ff)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }} className="text-[12vw] font-extrabold leading-none">
-            Plata × Vulue
-          </div>
-        </Max>
-      </div>
-    </Section>
-  );
-}
-
-/* ----------------- TAKE YOUR NEXT LEAP (wave background) ----------------- */
+/* ----------------- TAKE YOUR NEXT LEAP ----------------- */
 function TakeNextLeap() {
   return (
     <Section className="relative py-20">
@@ -384,26 +340,25 @@ function TakeNextLeap() {
   );
 }
 
-/* ----------------- TRAILX SUITE (small quadrant square left with text on right) ----------------- */
+/* ----------------- TRAILX SUITE (quadrant images must fill their boxes completely) ----------------- */
 function TrailxSuite() {
   return (
     <Section id="suite" className="bg-white py-20">
       <Max>
         <div className="grid md:grid-cols-3 gap-8 items-center">
-          {/* Left: small square quadrant (not huge) */}
+          {/* Left: quadrant square */}
           <div className="md:col-span-1">
             <div className="max-w-xs">
-              <div className="aspect-square max-w-[240px] grid grid-cols-2 grid-rows-2 gap-1 rounded-lg overflow-hidden border border-neutral-100 shadow-sm">
-                <div className="flex items-center justify-center bg-gray-50"><img src={Partner1} alt="p1" className="max-h-20 object-contain" /></div>
-                <div className="flex items-center justify-center bg-gray-50"><img src={Partner2} alt="p2" className="max-h-20 object-contain" /></div>
-                <div className="flex items-center justify-center bg-gray-50"><img src={Partner3} alt="p3" className="max-h-20 object-contain" /></div>
-                <div className="flex items-center justify-center bg-gray-50"><img src={Partner4} alt="p4" className="max-h-20 object-contain" /></div>
+              <div className="aspect-square max-w-[240px] grid grid-cols-2 grid-rows-2 gap-0 rounded-lg overflow-hidden border border-neutral-100 shadow-sm">
+                <div className="w-full h-full"><img src={Partner1} alt="p1" className="w-full h-full object-cover" /></div>
+                <div className="w-full h-full"><img src={Partner2} alt="p2" className="w-full h-full object-cover" /></div>
+                <div className="w-full h-full"><img src={Partner3} alt="p3" className="w-full h-full object-cover" /></div>
+                <div className="w-full h-full"><img src={Partner4} alt="p4" className="w-full h-full object-cover" /></div>
               </div>
               <div className="mt-4 text-sm text-neutral-600 font-semibold">Our TrailX Suite</div>
             </div>
           </div>
 
-          {/* Right: descriptive text spanning two columns on md */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-[#0A0B14]">Our TrailX Suite</h3>
             <p className="mt-3 text-[#0A0B14]/80">
@@ -416,7 +371,7 @@ function TrailxSuite() {
   );
 }
 
-/* ----------------- FOOTER (with X + LinkedIn icons) ----------------- */
+/* ----------------- FOOTER (X + LinkedIn) ----------------- */
 function Footer() {
   const X_LINK = "https://x.com/Vulueng";
   const LI_LINK = "https://www.linkedin.com/company/vulue-ltd/";
@@ -438,15 +393,13 @@ function Footer() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <a href={X_LINK} target="_blank" rel="noreferrer" className="hover:opacity-90">
-              {/* X icon */}
+            <a href={X_LINK} target="_blank" rel="noreferrer" className="hover:opacity-90" aria-label="X">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white/90">
                 <path d="M23 4.559a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0022.337 3a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616 3c-2.72 0-4.924 2.206-4.924 4.924 0 .386.044.762.127 1.124C7.728 8.95 4.1 6.87 1.671 3.865a4.92 4.92 0 00-.666 2.475c0 1.708.87 3.216 2.188 4.099A4.904 4.904 0 01.96 9.1v.062c0 2.386 1.697 4.374 3.95 4.826a4.935 4.935 0 01-2.212.084c.623 1.942 2.432 3.357 4.576 3.399A9.867 9.867 0 010 19.54 13.94 13.94 0 007.548 21.5c9.142 0 14.307-7.721 13.995-14.646A9.935 9.935 0 0023 4.559z" />
               </svg>
             </a>
 
-            <a href={LI_LINK} target="_blank" rel="noreferrer" className="hover:opacity-90">
-              {/* LinkedIn icon */}
+            <a href={LI_LINK} target="_blank" rel="noreferrer" className="hover:opacity-90" aria-label="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white/90">
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM0 8h4.98V24H0zM9 8h4.79v2.16h.07c.67-1.27 2.31-2.6 4.75-2.6 5.08 0 6.01 3.35 6.01 7.71V24h-4.98v-7.55c0-1.8-.03-4.12-2.51-4.12-2.51 0-2.89 1.96-2.89 4v7.67H9V8z" />
               </svg>
@@ -462,7 +415,7 @@ function Footer() {
   );
 }
 
-/* ----------------- WAITLIST MODAL (used by Login) ----------------- */
+/* ----------------- WAITLIST MODAL ----------------- */
 function WaitlistModal({ onClose, emailPrefill = "" }) {
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
@@ -515,12 +468,14 @@ function WaitlistModal({ onClose, emailPrefill = "" }) {
   );
 }
 
-/* ----------------- LOGIN (page that follows supplied aesthetic) ----------------- */
+/* ----------------- LOGIN (sleek select + password eye toggle + aesthetics) ----------------- */
 function Login() {
   const [accountType, setAccountType] = useState("Professional Account");
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [showWaitlist, setShowWaitlist] = useState(false);
+  const [showOtp, setShowOtp] = useState(false);
+  const [selectOpen, setSelectOpen] = useState(false);
 
   const canConfirm = email.length > 3 && otp.length >= 4;
 
@@ -531,7 +486,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-[#0A0B14] text-white">
-      {/* diagonal line overlay to mimic design */}
+      {/* diagonal line overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <line x1="0" y1="100" x2="100" y2="0" stroke="#cfcfcf" strokeWidth="0.6" opacity="0.12" />
@@ -543,36 +498,76 @@ function Login() {
           <h1 className="text-5xl font-extrabold tracking-tight mb-10">Log In</h1>
 
           <form onSubmit={onConfirm} className="space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
-              <label className="block text-sm text-white/70 mb-2">Account Type</label>
-              <div className="relative">
-                <select value={accountType} onChange={(e) => setAccountType(e.target.value)} className="w-full rounded-xl bg-[#0C0F17] px-4 py-3 pr-10 text-white/90 outline-none ring-1 ring-white/10">
-                  <option>Individual Account</option>
-                  <option>Professional Account</option>
-                  <option>Enterprise Account</option>
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            {/* Sleek custom select */}
+            <div className="rounded-2xl border border-white/10 bg-black/40 p-2">
+              <label className="block text-sm text-white/70 mb-2 px-3">Account Type</label>
+              <div className="relative px-3">
+                <button
+                  type="button"
+                  onClick={() => setSelectOpen((s) => !s)}
+                  className="w-full text-left rounded-xl bg-[#0C0F17] px-4 py-3 flex items-center justify-between outline-none ring-1 ring-white/10"
+                  aria-haspopup="listbox"
+                  aria-expanded={selectOpen}
+                >
+                  <span className="text-white/90">{accountType}</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white/70">
                     <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </div>
+                </button>
+
+                {selectOpen && (
+                  <ul className="absolute left-3 right-3 mt-2 z-20 rounded-xl bg-[#0C0F17] ring-1 ring-white/10 overflow-hidden">
+                    {["Individual Account", "Professional Account", "Enterprise Account"].map((opt) => (
+                      <li key={opt}>
+                        <button
+                          type="button"
+                          onClick={() => { setAccountType(opt); setSelectOpen(false); }}
+                          className="w-full text-left px-4 py-3 hover:bg-white/5 text-white/90"
+                        >
+                          {opt}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
 
+            {/* Email */}
             <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
               <label className="block text-sm text-white/70 mb-2">Work Email</label>
               <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter in your work email" className="w-full rounded-xl bg-[#0C0F17] px-4 py-3 text-white/90 outline-none ring-1 ring-white/10" />
             </div>
 
+            {/* OTP with eye toggle */}
             <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
               <label className="block text-sm text-white/70 mb-2">8-digit OTP</label>
               <div className="relative">
-                <input value={otp} onChange={(e) => setOtp(e.target.value)} placeholder="Enter 8-digit OTP" maxLength={8} className="w-full rounded-xl bg-[#0C0F17] px-4 py-3 pr-10 text-white/90 outline-none ring-1 ring-white/10" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="opacity-70">
-                    <path d="M3 3l18 18M10.58 10.58A2 2 0 1113.41 13.4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
+                <input
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  placeholder="Enter 8-digit OTP"
+                  maxLength={8}
+                  type={showOtp ? "text" : "password"}
+                  className="w-full rounded-xl bg-[#0C0F17] px-4 py-3 pr-12 text-white/90 outline-none ring-1 ring-white/10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowOtp((s) => !s)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-2 text-white/70 hover:bg-white/5"
+                  aria-label={showOtp ? "Hide OTP" : "Show OTP"}
+                >
+                  {showOtp ? (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                      <path d="M3 3l18 18M10.58 10.58A2 2 0 1113.41 13.4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ) : (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                      <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
+                  )}
+                </button>
               </div>
             </div>
 
@@ -597,7 +592,7 @@ function Login() {
   );
 }
 
-/* ----------------- LANDING (assemble all corrected sections in the requested sequence) ----------------- */
+/* ----------------- LANDING (assemble in requested sequence) ----------------- */
 function Landing() {
   return (
     <div className="bg-[#0A0B14] text-white">
@@ -609,8 +604,7 @@ function Landing() {
         <TechnologyProvider />
         <Insights />
         <StrategiesBuilt />
-        <VuluePlata />
-        <PlataVulueVisual />
+        <PlataAndVulueCombined />
         <TakeNextLeap />
         <TrailxSuite />
         <Footer />
@@ -629,4 +623,4 @@ export default function App() {
       </Routes>
     </Router>
   );
-              }
+      }
