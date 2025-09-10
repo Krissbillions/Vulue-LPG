@@ -92,43 +92,45 @@ function Hero() {
   );
 }
 
-/* ---------------- TOGETHER WE CREATE ---------------- */
-function TogetherWeCreate() {
+/* ---------------- SOFTWARE & INTELLIGENCE COMPANY ---------------- */
+function SoftwareIntelligence() {
   return (
     <section id="about" className="bg-black text-white py-32">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
         <div>
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Together we create
+            We are a software and intelligence technology company
           </h2>
           <p className="text-lg leading-relaxed text-gray-300 mb-8">
-            We believe collaboration is at the heart of innovation. Vulue brings
-            people, data, and technology together to craft solutions that move
-            industries forward. From insight to execution, our approach is built
-            on partnership.
+            We are a software and intelligence technology company focused on
+            powering collaborative finance in West Africa and other frontier
+            markets.
+            <br />
+            <br />
+            We aim to provide a platform-as-a-service infrastructure for
+            friends, families, investment clubs, and strategy groups to explore,
+            coordinate, and manage their investment interests — all through a
+            secure, private environment backed by trusted capital market
+            providers.
+            <br />
+            <br />
+            Our platform, powered by TrailX+ enables the formation of digital
+            strategy baskets hosted by LLPs, LPs, and registered capital
+            managers. Each group or firm maintains control over visibility,
+            access, and allocation logic for their unique plans.
+            <br />
+            <br />
+            Vulue's mission is to streamline technology adoption across emerging
+            capital ecosystems by building a regulated-aligned, modular platform
+            where licensed entities and private groups can operate efficiently
+            and transparently.
+            <br />
+            <br />
+            We do not act as a broker-dealer, investment adviser, or asset
+            manager, nor do we hold or move investor funds. All transactional
+            access is provided via integration with duly licensed third-party
+            API partners and intermediaries.
           </p>
-          <div className="grid grid-cols-3 gap-6">
-            <div className="flex flex-col items-start">
-              <span className="text-xl font-semibold">Data Strategy</span>
-              <span className="text-sm text-gray-400">
-                Frameworks for clarity.
-              </span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-xl font-semibold">
-                Proprietary Analytics
-              </span>
-              <span className="text-sm text-gray-400">
-                Insights built for you.
-              </span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-xl font-semibold">Execution</span>
-              <span className="text-sm text-gray-400">
-                From plan to practice.
-              </span>
-            </div>
-          </div>
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div className="p-8 bg-white/10 rounded-2xl">
@@ -170,28 +172,25 @@ function Partners() {
   return (
     <section
       id="partners"
-      className="relative py-32 bg-white text-gray-900 overflow-hidden"
+      className="relative py-32 text-gray-900 overflow-hidden"
     >
       <img
         src={gradient1}
         alt=""
-        className="absolute top-0 right-0 w-2/3 opacity-20 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
-      <div className="relative max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-10">
-          A look at our partners paving the future!
-        </h2>
-        <div className="bg-white rounded-3xl shadow-xl p-10 mb-16">
-          <h3 className="text-2xl font-bold mb-4">
-            Partners Proprietary LLP
-          </h3>
+      <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">
+            A look at our partners paving the future!
+          </h2>
           <p className="text-lg leading-relaxed">
             We work hand-in-hand with our partners to pioneer the technologies
             of tomorrow. Our collaborations focus on driving impact where it
             matters most—helping industries adapt, evolve, and lead.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+        <div className="grid grid-cols-2 gap-12">
           <img src={partner1} alt="Partner 1" className="h-20 mx-auto" />
           <img src={partner2} alt="Partner 2" className="h-20 mx-auto" />
           <img src={partner3} alt="Partner 3" className="h-20 mx-auto" />
@@ -205,14 +204,42 @@ function Partners() {
 /* ---------------- TECHNOLOGY PROVIDER ---------------- */
 function TechnologyProvider() {
   return (
-    <section className="py-32 bg-gray-50 text-gray-900">
+    <section className="py-32 bg-white text-gray-900">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">We are a technology provider</h2>
-        <p className="text-lg leading-relaxed">
-          Our role is to empower organizations with cutting-edge tools,
-          analytics, and actionable frameworks. Vulue’s data-intelligent
-          approach means every solution is tailored to your unique business
-          challenges, ensuring measurable and sustainable value.
+        <h2 className="text-4xl font-bold mb-6">
+          We are a Technology Provider & Partner to Proprietary Partners LLP
+        </h2>
+        <p className="text-lg leading-relaxed whitespace-pre-line text-left">
+          ““As a Private Family Office Partnership, our members and partners
+          enjoy structured access to hedge-fund-style strategies while retaining
+          the stability of traditional assets. With the support of trusted
+          broker/dealers and sub-brokerages, VULUE enables the electronic
+          infrastructure through which our family office operates.
+          <br />
+          <br />
+          Together with VULUE, we maintain proprietary systems for the curation,
+          aggregation, and in-house distribution of non-discretionary strategies
+          — including speculative long/short trades, active rebalancing, passive
+          baskets, and dividend-focused portfolios. These strategies are
+          available exclusively to our limited partners and family office
+          members.
+          <br />
+          <br />
+          Our managing and limited member-shareholders gain exposure to
+          consistently outperforming strategies and tailored planning across
+          global and domestic Fixed Income and Money Market instruments,
+          Equities, Derivatives, and selected alternative classes such as REITs,
+          Infrastructure Funds, and digital assets. Both our in-house and
+          third-party strategy contributors rely on VULUE’s proprietary
+          technology to scrutinize the capital markets and identify
+          opportunities.
+          <br />
+          <br />
+          Access remains restricted to pre-admitted limited liability partners
+          and members. THE STRATEGIES PROVIDED THROUGH THIS PLATFORM DO NOT
+          CONSTITUTE ASSET MANAGEMENT SERVICES NOR INVESTMENT ADVICE. THEY ARE
+          DESIGNED SOLELY FOR THE INTERNAL USE OF OUR FAMILY OFFICE NETWORK OF
+          FINANCIALLY SOPHISTICATED PARTNERS.”
         </p>
       </div>
     </section>
@@ -231,21 +258,13 @@ function Insights() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-20"
       />
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">
-          From insights to impact!
-        </h2>
-        <p className="text-lg leading-relaxed mb-8">
-          We unlock the full potential of your data to create transformation at
-          scale. With Vulue, actionable insights evolve into meaningful change
-          that reshapes industries and fuels innovation.
-        </p>
-        <a
-          href="#approach"
-          className="inline-block mt-6 text-blue-400 font-semibold hover:underline"
-        >
-          Read the approach →
-        </a>
+      <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-2 gap-12">
+        <div className="flex items-start justify-start">
+          <h2 className="text-5xl font-bold">From Insights to Impact!</h2>
+        </div>
+        <div className="flex items-end justify-end">
+          <h3 className="text-2xl font-semibold text-blue-400">TrailX</h3>
+        </div>
       </div>
     </section>
   );
@@ -254,15 +273,82 @@ function Insights() {
 /* ---------------- STRATEGIES BUILT ---------------- */
 function StrategiesBuilt() {
   return (
-    <section className="py-32 bg-gray-50 text-gray-900">
+    <section className="py-32 bg-blue-900 text-white">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-6">
-          We took their strategies and built…
+          We took their strategies and built a Quantamental Analytics Framework
+          for In-House Growth
         </h2>
-        <p className="text-lg leading-relaxed">
-          By translating innovative strategies into structured execution, we
-          help organizations realize tangible impact. Our frameworks deliver
-          measurable progress that withstands disruption and uncertainty.
+        <p className="text-lg leading-relaxed text-gray-200 text-left whitespace-pre-line">
+          It is the proprietary software layer and third party integrations
+          streamlined, augmenting the research, simulation, of curated
+          strategies exclusively within the Proprietary Partners LLP network.
+          Enhancing value capture, we help build an maintain a semi-custom
+          graphical user interface for which they carry out performance
+          reporting, user management, and the analytics behind long/short,
+          actively rebalanced, dividend-yielding, and passively structured
+          baskets — with deep (manual and electronic) integration into
+          ‘wealth-techs’ and legacy financial houses for equities, fixed income
+          and alternatives access across Nigeria, the United States, and select
+          global jurisdictions.
+          <br />
+          <br />
+          It is a restricted-use system serving the internal strategy and
+          analytics needs of LLP member-shareholders and pre-approved strategy
+          providers. Through direct integration with broker-dealer, sub-broker,
+          advisory pipes and curated data flows, TRAILX enables our to navigate
+          high-alpha signal, Multi-Asset compression trends, Dividend
+          resilience, Macro-regional correlation shifts, rapid suggestive
+          weightings, inflation-devaluation hedged returns modelling.
+          <br />
+          <br />
+          VULUE continues to act as the technology provider, providing ongoing
+          consulting, system upkeep, and new development. This relationship is
+          structured around technology license royalties and bespoke PaaS fees,
+          ensuring the family office’s infrastructure remains both exclusive and
+          adaptable to future opportunities.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- VULUE × PLATA PARTNERSHIP ---------------- */
+function VuluePlataText() {
+  return (
+    <section className="py-32 bg-white text-gray-900">
+      <div className="max-w-5xl mx-auto px-6 text-center">
+        <p className="text-lg leading-relaxed text-left whitespace-pre-line">
+          Vulue partners with Plata to unlock the full potential of Real-World
+          Assets and Strategies. Our purpose is to democratize access to
+          high-value assets by providing a streamlined, end-to-end solution for
+          tokenization. Functionally, we offer some of the tools for Plata to
+          carry out asset wrapping, and the minting of Strategy Vaults as a
+          class of our broader Real World Asset-Linked Vault Tokens. The
+          project's core utility is twofold: for asset owners, it unlocks
+          immediate liquidity and access to global capital markets; for
+          investors, it offers fractional, transparent, and Iiquid access to
+          investment classes like private credit notes and infrastructure bonds,
+          with the value of the tokens engineered to mirror the underlying RWASs
+          performances.
+          <br />
+          <br />
+          Vulue acts as the technology provider. It builds the rails (TrailX+
+          quant tools, order, reconciliation & settlement sytem, monitoring,
+          token infrastructure). Vulue issues the Asset-Linked Vault Tokens as
+          digital wrappers but doesn’t “own” the strategies themselves. While
+          Plata acts as the service provider & structuring arm (like a global
+          holding wrapper). It sets up the subsidiaries/LLCs/LLPs in each market
+          and holds/executes the real-world assets or strategies that the tokens
+          mirror.
+          <br />
+          <br />
+          The vault strategies sit inside Plata (jurisdictional entities). The
+          tokens sit inside Vulue (as wrappers/tracking instruments). The two
+          are linked 1:1 as Vulue can transparently monitor what Plata is doing
+          and reflect that in token performance. Vulue makes it portable,
+          visible, tokenized. Plata makes it legally holdable, bankable,
+          compliant.
         </p>
       </div>
     </section>
@@ -297,6 +383,7 @@ function TakeNextLeap() {
       className="relative py-40 text-white text-center"
       style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "cover" }}
     >
+      <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Take your next leap with us
@@ -341,173 +428,4 @@ function TrailXSuite() {
           partner solutions. It’s built to accelerate outcomes and unlock
           enterprise-scale value.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
-          <img src={partner1} alt="Partner 1" className="h-20 mx-auto" />
-          <img src={partner2} alt="Partner 2" className="h-20 mx-auto" />
-          <img src={partner3} alt="Partner 3" className="h-20 mx-auto" />
-          <img src={partner4} alt="Partner 4" className="h-20 mx-auto" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- FOOTER ---------------- */
-function Footer() {
-  return (
-    <footer className="bg-[#0A0A1A] text-white py-16">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-center">
-        <img src={logo} alt="Vulue Logo" className="h-12" />
-        <div className="flex justify-center md:justify-start gap-8">
-          <a href="#about" className="hover:text-blue-400">
-            About
-          </a>
-          <a href="#partners" className="hover:text-blue-400">
-            Partners
-          </a>
-          <a href="#insights" className="hover:text-blue-400">
-            Insights
-          </a>
-        </div>
-        <p className="text-sm text-gray-400 md:text-right">
-          © {new Date().getFullYear()} Vulue. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  );
-}
-
-/* ---------------- WAITLIST MODAL ---------------- */
-function WaitlistModal({ onClose }) {
-  return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-      <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md">
-        <h3 className="text-2xl font-bold mb-6 text-gray-900">
-          Join the Wait-list
-        </h3>
-        <form className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Full Name
-            </label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
-              placeholder="First and Surname"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
-              placeholder="you@example.com"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Join Wait-list
-          </button>
-        </form>
-        <button
-          onClick={onClose}
-          className="mt-6 text-gray-500 hover:text-gray-700 text-sm"
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-  );
-}
-
-/* ---------------- LOGIN PAGE ---------------- */
-function Login() {
-  const [showWaitlist, setShowWaitlist] = useState(false);
-
-  return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
-      <div className="w-full max-w-md bg-white p-10 rounded-2xl shadow-2xl">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
-          Login to join wait-list
-        </h2>
-        <form className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Account Type
-            </label>
-            <select className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
-              <option>Individual Account</option>
-              <option>Professional Account</option>
-              <option>Enterprise Account</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Work Email
-            </label>
-            <input
-              type="email"
-              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
-              placeholder="you@example.com"
-            />
-         </div>
-           <div>
-             <label className="block text-sm font-medium text-gray-700 mb-2">
-               Password
-             </label>
-             <input
-               type="password"
-               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
-               placeholder="Enter your password"
-             />
-           </div>
-           <button
-             type="button"
-             onClick={() => setShowWaitlist(true)}
-             className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-           >
-             Log in
-           </button>
-         </form>
-       </div>
-       {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} />}
-     </section>
-   );
-}
-
-/* ---------------- LANDING PAGE ---------------- */
-function LandingPage() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <TogetherWeCreate />
-      <Partners />
-      <TechnologyProvider />
-      <Insights />
-      <StrategiesBuilt />
-      <PlataVulue />
-      <TakeNextLeap />
-      <TrailXSuite />
-      <Footer />
-    </>
-  );
-}
-
-/* ---------------- APP ---------------- */
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+        <
