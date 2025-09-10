@@ -21,27 +21,28 @@ import partner2 from "./assets/partner-2.png";
 import partner3 from "./assets/partner-3.png";
 import partner4 from "./assets/partner-4.png";
 
+/* ---------------- NAVBAR ---------------- */
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <img src={logo} alt="Vulue Logo" className="h-10" />
         <div className="hidden md:flex gap-8 items-center text-gray-900 font-medium">
-          <a href="#about" className="hover:text-blue-600">
+          <a href="#about" className="hover:text-blue-600 transition">
             About
           </a>
-          <a href="#partners" className="hover:text-blue-600">
+          <a href="#partners" className="hover:text-blue-600 transition">
             Partners
           </a>
-          <a href="#insights" className="hover:text-blue-600">
+          <a href="#insights" className="hover:text-blue-600 transition">
             Insights
           </a>
-          <a href="#suite" className="hover:text-blue-600">
+          <a href="#suite" className="hover:text-blue-600 transition">
             TrailX Suite
           </a>
           <Link
             to="/login"
-            className="ml-6 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+            className="ml-6 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
           >
             Log in
           </Link>
@@ -51,6 +52,7 @@ function Navbar() {
   );
 }
 
+/* ---------------- HERO ---------------- */
 function Hero() {
   return (
     <section
@@ -62,14 +64,16 @@ function Hero() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       />
-      <div className="relative z-10 max-w-3xl px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+      <div className="relative z-10 max-w-4xl px-6">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Say hello to Vulue!
         </h1>
         <p className="text-lg md:text-xl mb-8 leading-relaxed">
-          The data-intelligent platform powering tomorrow’s decisions today.
+          Vulue is the future-ready data-intelligent platform that transforms
+          the way organizations create value from data. With Vulue, your
+          strategies are not just written, they’re realized.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-wrap">
           <Link
             to="/login"
             className="px-6 py-3 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -88,45 +92,71 @@ function Hero() {
   );
 }
 
+/* ---------------- TOGETHER WE CREATE ---------------- */
 function TogetherWeCreate() {
   return (
-    <section id="about" className="bg-black text-white py-24">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+    <section id="about" className="bg-black text-white py-32">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
         <div>
-          <h2 className="text-4xl font-bold mb-6">Together we create</h2>
-          <p className="text-lg leading-relaxed">
-            Collaboration fuels innovation. At Vulue, we believe in working
-            together with our clients to craft smarter, data-driven outcomes
-            that unlock growth and resilience.
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Together we create
+          </h2>
+          <p className="text-lg leading-relaxed text-gray-300 mb-8">
+            We believe collaboration is at the heart of innovation. Vulue brings
+            people, data, and technology together to craft solutions that move
+            industries forward. From insight to execution, our approach is built
+            on partnership.
           </p>
+          <div className="grid grid-cols-3 gap-6">
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-semibold">Data Strategy</span>
+              <span className="text-sm text-gray-400">
+                Frameworks for clarity.
+              </span>
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-semibold">
+                Proprietary Analytics
+              </span>
+              <span className="text-sm text-gray-400">
+                Insights built for you.
+              </span>
+            </div>
+            <div className="flex flex-col items-start">
+              <span className="text-xl font-semibold">Execution</span>
+              <span className="text-sm text-gray-400">
+                From plan to practice.
+              </span>
+            </div>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-8">
-          <div className="p-6 bg-white/10 rounded-xl">
-            <img src={icon1} alt="" className="h-10 mb-4" />
-            <h3 className="font-semibold mb-2">Data Strategy</h3>
+          <div className="p-8 bg-white/10 rounded-2xl">
+            <img src={icon1} alt="" className="h-12 mb-4" />
+            <h3 className="font-semibold mb-2">Clarity</h3>
             <p className="text-sm text-gray-300">
-              Laying the right foundation for intelligent action.
+              Data clarity that drives decisions.
             </p>
           </div>
-          <div className="p-6 bg-white/10 rounded-xl">
-            <img src={icon2} alt="" className="h-10 mb-4" />
-            <h3 className="font-semibold mb-2">Analytics</h3>
+          <div className="p-8 bg-white/10 rounded-2xl">
+            <img src={icon2} alt="" className="h-12 mb-4" />
+            <h3 className="font-semibold mb-2">Collaboration</h3>
             <p className="text-sm text-gray-300">
-              Proprietary insights crafted to your needs.
+              Teams working seamlessly with data.
             </p>
           </div>
-          <div className="p-6 bg-white/10 rounded-xl">
-            <img src={icon3} alt="" className="h-10 mb-4" />
+          <div className="p-8 bg-white/10 rounded-2xl">
+            <img src={icon3} alt="" className="h-12 mb-4" />
             <h3 className="font-semibold mb-2">Execution</h3>
             <p className="text-sm text-gray-300">
-              Transforming strategies into measurable outcomes.
+              Transforming insights into action.
             </p>
           </div>
-          <div className="p-6 bg-white/10 rounded-xl">
-            <img src={icon4} alt="" className="h-10 mb-4" />
+          <div className="p-8 bg-white/10 rounded-2xl">
+            <img src={icon4} alt="" className="h-12 mb-4" />
             <h3 className="font-semibold mb-2">Enablement</h3>
             <p className="text-sm text-gray-300">
-              Empowering teams with the tools to thrive.
+              Empowering enterprises to succeed.
             </p>
           </div>
         </div>
@@ -135,64 +165,66 @@ function TogetherWeCreate() {
   );
 }
 
+/* ---------------- PARTNERS ---------------- */
 function Partners() {
   return (
     <section
       id="partners"
-      className="relative py-24 bg-white text-gray-900 overflow-hidden"
+      className="relative py-32 bg-white text-gray-900 overflow-hidden"
     >
       <img
         src={gradient1}
         alt=""
-        className="absolute top-0 right-0 w-1/2 opacity-20 pointer-events-none"
+        className="absolute top-0 right-0 w-2/3 opacity-20 pointer-events-none"
       />
       <div className="relative max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-8">
+        <h2 className="text-4xl font-bold mb-10">
           A look at our partners paving the future!
         </h2>
-        <div className="bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <div className="bg-white rounded-3xl shadow-xl p-10 mb-16">
           <h3 className="text-2xl font-bold mb-4">
             Partners Proprietary LLP
           </h3>
           <p className="text-lg leading-relaxed">
-            Driving impact with the right collaborations. Together, we leverage
-            cutting-edge technologies and methodologies to push industries
-            forward.
+            We work hand-in-hand with our partners to pioneer the technologies
+            of tomorrow. Our collaborations focus on driving impact where it
+            matters most—helping industries adapt, evolve, and lead.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <img src={partner1} alt="Partner 1" className="h-16 mx-auto" />
-          <img src={partner2} alt="Partner 2" className="h-16 mx-auto" />
-          <img src={partner3} alt="Partner 3" className="h-16 mx-auto" />
-          <img src={partner4} alt="Partner 4" className="h-16 mx-auto" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+          <img src={partner1} alt="Partner 1" className="h-20 mx-auto" />
+          <img src={partner2} alt="Partner 2" className="h-20 mx-auto" />
+          <img src={partner3} alt="Partner 3" className="h-20 mx-auto" />
+          <img src={partner4} alt="Partner 4" className="h-20 mx-auto" />
         </div>
       </div>
     </section>
   );
 }
 
+/* ---------------- TECHNOLOGY PROVIDER ---------------- */
 function TechnologyProvider() {
   return (
-    <section className="py-24 bg-gray-50 text-gray-900">
+    <section className="py-32 bg-gray-50 text-gray-900">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          We are a technology provider
-        </h2>
+        <h2 className="text-4xl font-bold mb-6">We are a technology provider</h2>
         <p className="text-lg leading-relaxed">
-          Vulue provides advanced analytics and integrated solutions that
-          empower businesses to adapt and lead. Our platform ensures that
-          insights are transformed into sustainable value.
+          Our role is to empower organizations with cutting-edge tools,
+          analytics, and actionable frameworks. Vulue’s data-intelligent
+          approach means every solution is tailored to your unique business
+          challenges, ensuring measurable and sustainable value.
         </p>
       </div>
     </section>
   );
 }
 
+/* ---------------- INSIGHTS ---------------- */
 function Insights() {
   return (
     <section
       id="insights"
-      className="relative py-32 bg-[#0A0A1A] text-white overflow-hidden"
+      className="relative py-40 bg-[#0A0A1A] text-white overflow-hidden"
     >
       <img
         src={chainImg}
@@ -200,14 +232,17 @@ function Insights() {
         className="absolute inset-0 w-full h-full object-cover opacity-20"
       />
       <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">From insights to impact!</h2>
-        <p className="text-lg leading-relaxed mb-6">
-          We go beyond data points—crafting actionable strategies that transform
-          industries. Vulue bridges the gap between knowledge and execution.
+        <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          From insights to impact!
+        </h2>
+        <p className="text-lg leading-relaxed mb-8">
+          We unlock the full potential of your data to create transformation at
+          scale. With Vulue, actionable insights evolve into meaningful change
+          that reshapes industries and fuels innovation.
         </p>
         <a
           href="#approach"
-          className="inline-block mt-4 text-blue-400 font-semibold hover:underline"
+          className="inline-block mt-6 text-blue-400 font-semibold hover:underline"
         >
           Read the approach →
         </a>
@@ -216,56 +251,62 @@ function Insights() {
   );
 }
 
+/* ---------------- STRATEGIES BUILT ---------------- */
 function StrategiesBuilt() {
   return (
-    <section className="py-24 bg-gray-50 text-gray-900">
+    <section className="py-32 bg-gray-50 text-gray-900">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-4xl font-bold mb-6">
           We took their strategies and built…
         </h2>
         <p className="text-lg leading-relaxed">
-          By translating insights into tangible outcomes, we create measurable
-          progress for our partners and clients. Our frameworks are built for
-          execution, scale, and adaptability.
+          By translating innovative strategies into structured execution, we
+          help organizations realize tangible impact. Our frameworks deliver
+          measurable progress that withstands disruption and uncertainty.
         </p>
       </div>
     </section>
   );
 }
 
+/* ---------------- PLATA × VULUE ---------------- */
 function PlataVulue() {
   return (
-    <section className="relative py-32 bg-gradient-to-r from-blue-900 to-blue-600 text-white overflow-hidden">
-      <div className="absolute inset-0 flex items-center justify-center text-8xl md:text-9xl font-extrabold text-white/10">
+    <section className="relative py-40 bg-gradient-to-r from-blue-900 to-blue-600 text-white overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center text-8xl md:text-[10rem] font-extrabold text-white/10">
         Plata × Vulue
       </div>
       <div className="relative max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Plata × Vulue Collaboration
         </h2>
         <p className="text-lg leading-relaxed">
-          Together we combine methodologies, tools, and execution capabilities
-          to offer unmatched solutions for modern enterprises. This partnership
-          symbolizes resilience, agility, and progress.
+          By combining our methodologies and tools with Plata’s execution
+          strength, Vulue provides unparalleled solutions designed for scale,
+          adaptability, and future resilience.
         </p>
       </div>
     </section>
   );
 }
 
+/* ---------------- TAKE NEXT LEAP ---------------- */
 function TakeNextLeap() {
   return (
     <section
-      className="relative py-32 text-white text-center"
+      className="relative py-40 text-white text-center"
       style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "cover" }}
     >
       <div className="relative z-10 max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-6">Take your next leap with us</h2>
-        <p className="text-lg leading-relaxed mb-8">
-          Join Vulue’s early access program today. Log in to join our exclusive
-          wait-list or connect directly with our team.
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          Take your next leap with us
+        </h2>
+        <p className="text-lg leading-relaxed mb-10">
+          Become part of Vulue’s early access program. Log in to join our wait
+          list and shape the future with us—or connect directly with our team to
+          explore tailored solutions.
         </p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-wrap">
           <Link
             to="/login"
             className="px-6 py-3 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition"
@@ -284,35 +325,40 @@ function TakeNextLeap() {
   );
 }
 
+/* ---------------- TRAILX SUITE ---------------- */
 function TrailXSuite() {
   return (
     <section
       id="suite"
-      className="py-24 bg-white text-gray-900 border-t border-gray-200"
+      className="py-32 bg-white text-gray-900 border-t border-gray-200"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Our TrailX Suite</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          Our TrailX Suite
+        </h2>
         <p className="text-lg leading-relaxed mb-12">
-          Explore the powerful tools and partner ecosystem that form our TrailX
-          Suite, designed to unlock new dimensions of value for enterprises.
+          The TrailX Suite is Vulue’s complete ecosystem of tools, insights, and
+          partner solutions. It’s built to accelerate outcomes and unlock
+          enterprise-scale value.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <img src={partner1} alt="Partner 1" className="h-16 mx-auto" />
-          <img src={partner2} alt="Partner 2" className="h-16 mx-auto" />
-          <img src={partner3} alt="Partner 3" className="h-16 mx-auto" />
-          <img src={partner4} alt="Partner 4" className="h-16 mx-auto" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+          <img src={partner1} alt="Partner 1" className="h-20 mx-auto" />
+          <img src={partner2} alt="Partner 2" className="h-20 mx-auto" />
+          <img src={partner3} alt="Partner 3" className="h-20 mx-auto" />
+          <img src={partner4} alt="Partner 4" className="h-20 mx-auto" />
         </div>
       </div>
     </section>
   );
 }
 
+/* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
-    <footer className="bg-[#0A0A1A] text-white py-12">
+    <footer className="bg-[#0A0A1A] text-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-center">
         <img src={logo} alt="Vulue Logo" className="h-12" />
-        <div className="flex justify-center md:justify-start gap-6">
+        <div className="flex justify-center md:justify-start gap-8">
           <a href="#about" className="hover:text-blue-400">
             About
           </a>
@@ -331,31 +377,32 @@ function Footer() {
   );
 }
 
+/* ---------------- WAITLIST MODAL ---------------- */
 function WaitlistModal({ onClose }) {
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-        <h3 className="text-2xl font-bold mb-4 text-gray-900">
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+      <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md">
+        <h3 className="text-2xl font-bold mb-6 text-gray-900">
           Join the Wait-list
         </h3>
-        <form className="space-y-4">
+        <form className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Full Name
             </label>
             <input
               type="text"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600"
+              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
               placeholder="First and Surname"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Email
             </label>
             <input
               type="email"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600"
+              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
               placeholder="you@example.com"
             />
           </div>
@@ -368,7 +415,7 @@ function WaitlistModal({ onClose }) {
         </form>
         <button
           onClick={onClose}
-          className="mt-4 text-gray-500 hover:text-gray-700 text-sm"
+          className="mt-6 text-gray-500 hover:text-gray-700 text-sm"
         >
           Cancel
         </button>
@@ -377,61 +424,63 @@ function WaitlistModal({ onClose }) {
   );
 }
 
+/* ---------------- LOGIN PAGE ---------------- */
 function Login() {
   const [showWaitlist, setShowWaitlist] = useState(false);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl">
-        <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">
+    <section className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
+      <div className="w-full max-w-md bg-white p-10 rounded-2xl shadow-2xl">
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
           Login to join wait-list
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Account Type
             </label>
-            <select className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600">
+            <select className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600">
               <option>Individual Account</option>
               <option>Professional Account</option>
               <option>Enterprise Account</option>
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Work Email
             </label>
             <input
               type="email"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600"
+              className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
               placeholder="you@example.com"
             />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              OTP
-            </label>
-            <input
-              type="text"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600"
-              placeholder="Enter OTP"
-            />
-          </div>
-          <button
-            type="button"
-            onClick={() => setShowWaitlist(true)}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Log in
-          </button>
-        </form>
-      </div>
-      {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} />}
-    </section>
-  );
+         </div>
+           <div>
+             <label className="block text-sm font-medium text-gray-700 mb-2">
+               Password
+             </label>
+             <input
+               type="password"
+               className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600"
+               placeholder="Enter your password"
+             />
+           </div>
+           <button
+             type="button"
+             onClick={() => setShowWaitlist(true)}
+             className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+           >
+             Log in
+           </button>
+         </form>
+       </div>
+       {showWaitlist && <WaitlistModal onClose={() => setShowWaitlist(false)} />}
+     </section>
+   );
 }
 
-function Landing() {
+/* ---------------- LANDING PAGE ---------------- */
+function LandingPage() {
   return (
     <>
       <Navbar />
@@ -449,13 +498,16 @@ function Landing() {
   );
 }
 
-export default function App() {
+/* ---------------- APP ---------------- */
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
 }
+
+export default App;
