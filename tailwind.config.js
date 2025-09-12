@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        vulueBlue: "#0026FF",
-        vulueDark: "#0B0B0F",
+        // Example Vulue branding colors (customize as needed)
+        vulueBlue: "#1E3A8A",
+        vulueGreen: "#10B981",
+        vulueGray: "#6B7280",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
       },
     },
   },
