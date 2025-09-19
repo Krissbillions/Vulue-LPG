@@ -1,0 +1,122 @@
+.loading-screen {
+  position: absolute;
+  width: 430px;
+  height: 849px;
+  top: 0;
+  left: 0;
+  background: #1511d1;
+  overflow: hidden;
+}
+.picsart {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  width: 42.673px;
+  height: 51px;
+  top: 43px;
+  left: 41px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/bKDATEgRrY.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: -Infinity;
+}
+.flex-column-c {
+  position: absolute;
+  width: 60%;
+  height: 78.33%;
+  top: 6.6%;
+  left: 9.53%;
+  font-size: 0px;
+  z-index: 6;
+}
+.vulue {
+  display: block;
+  position: relative;
+  height: 31px;
+  margin: 0 0 0 35px;
+  color: #ffffff;
+  font-family: Anek Odia, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 30.72px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.say-hello {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 258px;
+  height: 294px;
+  margin: 148px 0 0 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 83.6px;
+  text-align: left;
+  z-index: 4;
+}
+.rectangle {
+  position: absolute;
+  width: 39.53%;
+  height: 6.17%;
+  top: 95.64%;
+  left: 0;
+  background: #02006b;
+  z-index: 5;
+  border-radius: 15px;
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 2.11%;
+  top: 97.89%;
+  left: 12.79%;
+  color: #ffffff;
+  font-family: Anek Odia, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+.group-1 {
+  position: absolute;
+  width: 17px;
+  height: 15px;
+  top: 60px;
+  left: 358px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/2FXOwLnp4P.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+.rectangle-2 {
+  position: absolute;
+  width: 527.798px;
+  height: 278.87px;
+  top: 794px;
+  left: 245.309px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/GcWuaSt1eD.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+.line {
+  position: absolute;
+  width: 430.484px;
+  height: 108.94px;
+  top: 728.06px;
+  left: -0.48px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/Tw4vVqCQXi.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}

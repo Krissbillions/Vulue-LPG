@@ -1,0 +1,101 @@
+.value-core {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 203px;
+  height: 227px;
+  margin: 11px 0 0 30px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+  z-index: 1;
+}
+.flex-column {
+  position: relative;
+  width: 184px;
+  height: 80px;
+  margin: 472px 0 0 235px;
+  font-size: 0px;
+  z-index: 4;
+  overflow: visible auto;
+}
+.software-intelligence {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 181px;
+  height: 48px;
+  margin: 0 0 0 3px;
+  color: #213d4a;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 275;
+  line-height: 15.48px;
+  text-align: left;
+  z-index: 2;
+}
+.trailx {
+  position: absolute;
+  width: 93px;
+  height: 51px;
+  top: 58px;
+  left: 0;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 51px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 3;
+}
+.trail {
+  position: relative;
+  color: #f3feff;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 51.2px;
+  text-align: left;
+}
+.x {
+  position: relative;
+  color: #f3feff;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 51.2px;
+  text-align: left;
+}
+.trademark {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 13px;
+  top: 67px;
+  left: 94px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.8px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
+}
+.picsart {
+  position: absolute;
+  width: 430px;
+  height: 849px;
+  top: 0;
+  left: 0;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-19/j433a4oKu5.png)
+    no-repeat center;
+  background-size: cover;
+}

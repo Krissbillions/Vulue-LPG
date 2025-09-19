@@ -1,0 +1,101 @@
+.empty {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 0px;
+  background: #000000;
+  overflow: hidden;
+}
+.software-technology {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 364px;
+  height: 270px;
+  margin: 35px 0 0 32px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+  letter-spacing: -0.24px;
+  z-index: 1;
+}
+.enquiries {
+  display: block;
+  position: relative;
+  height: 27px;
+  margin: 148px 0 0 32px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.contact {
+  display: block;
+  position: relative;
+  height: 23px;
+  margin: 17px 0 0 32px;
+  color: #bcbbbb;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.flex-row-cdc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 80px;
+  height: 25px;
+  margin: 55px 0 0 32px;
+  z-index: 5;
+}
+.image {
+  flex-shrink: 0;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-19/uJcOyxboey.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+.image-1 {
+  flex-shrink: 0;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-19/1e6Jg71KXp.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+}
+.all-rights-preserved {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 263px;
+  height: 46px;
+  margin: 170px 0 0 32px;
+  color: #bcbbbb;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: left;
+  z-index: 6;
+}

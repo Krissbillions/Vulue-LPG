@@ -1,0 +1,112 @@
+.empty {
+  position: absolute;
+  width: 430px;
+  height: 910px;
+  top: 0;
+  left: 0;
+  background: #0b10de;
+  overflow: hidden;
+}
+.real-world-assets {
+  position: relative;
+  width: 364px;
+  height: 449px;
+  margin: 171px 0 0 39px;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 24px;
+  text-align: left;
+  z-index: 1;
+}
+.vulue-partners {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 24px;
+  text-align: left;
+}
+.plata {
+  position: relative;
+  color: #ffffff;
+  font-family: Anek Odia, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+.vulue-partners-1 {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 24px;
+  text-align: left;
+}
+.strategy-vaults {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+.vulue-partners-2 {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 24px;
+  text-align: left;
+}
+.strategy-vaults-3 {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+.global-capital-markets {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 275;
+  line-height: 24px;
+  text-align: left;
+}
+.flagship-vehicles {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  width: 161px;
+  height: 3.3%;
+  top: 85.82%;
+  left: 9.07%;
+  color: #ffffff;
+  font-family: Anek Odia, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  text-align: left;
+  z-index: 2;
+}
+.line {
+  position: absolute;
+  width: 7.59px;
+  height: 10.474px;
+  top: 780.77px;
+  left: 195.563px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-19/r3VxdfBqyn.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}

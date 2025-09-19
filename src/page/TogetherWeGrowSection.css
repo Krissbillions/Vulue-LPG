@@ -1,0 +1,245 @@
+.empty {
+  position: absolute;
+  width: 430px;
+  height: 849px;
+  top: 0;
+  left: 0;
+  font-size: 0px;
+  background: #000000;
+  overflow: hidden;
+}
+.together-we-grow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 219px;
+  height: 80px;
+  margin: 58px 0 0 49px;
+  color: #ffffff;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  z-index: 2;
+}
+.software-technology-company {
+  position: relative;
+  width: 325px;
+  height: 167px;
+  margin: 83px 0 0 54px;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25.8px;
+  text-align: left;
+  z-index: 3;
+}
+.tokenised-finance {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25.8px;
+  text-align: left;
+}
+.software-and-intelligence-technology {
+  position: relative;
+  color: #ffffff;
+  font-family: Anek Odia, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+  text-align: left;
+}
+.focused-on-powering-tokenised {
+  position: relative;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25.8px;
+  text-align: left;
+}
+.flex-row-e {
+  position: relative;
+  width: 288.91px;
+  height: 135.099px;
+  margin: 85px 0 0 62px;
+  z-index: 7;
+}
+.group-1 {
+  position: absolute;
+  width: 94px;
+  height: 97px;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.basil-bank-outline {
+  position: relative;
+  width: 35.262px;
+  height: 31.423px;
+  margin: 0 0 0 27.844px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/6ufENUvYFe.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+  overflow: hidden;
+}
+.millions-under-management {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 94px;
+  height: 43px;
+  margin: 22.577px 0 0 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.56px;
+  text-align: center;
+  z-index: 6;
+}
+.group-2 {
+  position: absolute;
+  width: 95.91px;
+  height: 132.099px;
+  top: 3px;
+  left: 193px;
+  z-index: 7;
+}
+.grommet-icons-group {
+  position: relative;
+  width: 28.773px;
+  height: 26.678px;
+  margin: 0 0 0 35.383px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/9JCPuPpHfo.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+  overflow: hidden;
+}
+.growing-clientele {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 95.91px;
+  height: 71.141px;
+  margin: 34.28px 0 0 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.56px;
+  text-align: center;
+  z-index: 9;
+}
+.flex-row-aeb {
+  position: relative;
+  width: 313.215px;
+  height: 163px;
+  margin: 53.901px 0 0 62px;
+  z-index: 15;
+}
+.group-3 {
+  position: absolute;
+  width: 102px;
+  height: 163px;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+.vector {
+  position: relative;
+  width: 20.551px;
+  height: 20.551px;
+  margin: 0 0 0 36.895px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/9RiDFLeerk.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 16;
+}
+.millions-under-management-4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 102px;
+  height: 106px;
+  margin: 36.449px 0 0 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.56px;
+  text-align: center;
+  z-index: 17;
+}
+.group-5 {
+  position: absolute;
+  width: 141.215px;
+  height: 121px;
+  top: 0;
+  left: 172px;
+  z-index: 10;
+}
+.group-6 {
+  position: absolute;
+  width: 141.215px;
+  height: 121px;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+.vector-7 {
+  position: relative;
+  width: 23.757px;
+  height: 20.33px;
+  margin: 0 0 0 56.758px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/vhvNP7Ngc7.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 14;
+}
+.office {
+  position: relative;
+  width: 23.724px;
+  height: 24.49px;
+  margin: 3.134px 0 0 61.004px;
+  z-index: 13;
+  overflow: hidden;
+}
+.built-for-modern {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 141.215px;
+  height: 51.311px;
+  margin: 21.735px 0 0 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.56px;
+  text-align: center;
+  z-index: 12;
+}
+.rectangle {
+  position: absolute;
+  width: 527.798px;
+  height: 278.87px;
+  top: 794px;
+  left: 245.309px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-18/esCEW4yUtE.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
