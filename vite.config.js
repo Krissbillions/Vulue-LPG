@@ -5,11 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true, // listen on all addresses
-    port: 5173, // default port
-    allowedHosts: [
-      '359c55d6-36e7-4aa1-923a-0c99280f86dd-00-7zmacbhet0dn.riker.replit.dev',
-      'localhost',
-    ],
+    host: true,              // listen on all addresses (0.0.0.0)
+    port: 5173,              // you can change this if needed
+    allowedHosts: ['*'],     // allow all hosts (fixes "Blocked request" issue)
   },
 })
